@@ -1,130 +1,166 @@
-<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fun gradient background -->
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Retro 80s/90s gradients -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
-      <stop offset="25%" style="stop-color:#fde68a;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:1" />
-      <stop offset="75%" style="stop-color:#f59e0b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#312e81;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4c1d95;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="partyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
     </linearGradient>
-    <radialGradient id="spotlight" cx="50%" cy="30%" r="60%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
-    </radialGradient>
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
   <!-- Background -->
-  <rect width="800" height="500" fill="url(#bgGradient)"/>
-  <rect width="800" height="500" fill="url(#spotlight)"/>
+  <rect width="900" height="600" fill="url(#bgGradient)"/>
   
-  <!-- Party decorations -->
-  <circle cx="100" cy="80" r="15" fill="#ef4444" opacity="0.8"/>
-  <circle cx="700" cy="120" r="20" fill="#3b82f6" opacity="0.7"/>
-  <circle cx="50" cy="200" r="12" fill="#8b5cf6" opacity="0.6"/>
-  <circle cx="750" cy="300" r="18" fill="#f59e0b" opacity="0.8"/>
-  <circle cx="80" cy="400" r="14" fill="#ec4899" opacity="0.7"/>
-  <circle cx="720" cy="450" r="16" fill="#06b6d4" opacity="0.6"/>
+  <!-- Neon laser lines -->
+  <path d="M0 100 Q200 50 400 100 T800 100" stroke="url(#neonPink)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.8"/>
+  <path d="M0 150 Q300 100 600 150 T900 150" stroke="url(#neonBlue)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.6"/>
+  <path d="M0 200 Q250 150 500 200 T900 200" stroke="url(#neonCyan)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.7"/>
+  <path d="M0 250 Q350 200 700 250 T900 250" stroke="url(#neonPink)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.5"/>
   
-  <!-- Confetti -->
-  <rect x="120" y="60" width="4" height="12" rx="2" fill="#10b981" transform="rotate(45 122 66)"/>
-  <rect x="650" y="100" width="4" height="12" rx="2" fill="#ef4444" transform="rotate(-30 652 106)"/>
-  <rect x="200" y="40" width="4" height="12" rx="2" fill="#3b82f6" transform="rotate(60 202 46)"/>
-  <rect x="600" y="80" width="4" height="12" rx="2" fill="#f59e0b" transform="rotate(-45 602 86)"/>
+  <!-- Sparkling starbursts -->
+  <g opacity="0.8">
+    <path d="M100 80 L105 85 L100 90 L95 85 Z" fill="#ffffff" filter="url(#glow)"/>
+    <path d="M800 120 L805 125 L800 130 L795 125 Z" fill="#ffffff" filter="url(#glow)"/>
+    <path d="M200 60 L205 65 L200 70 L195 65 Z" fill="#ffffff" filter="url(#glow)"/>
+    <path d="M700 180 L705 185 L700 190 L695 185 Z" fill="#ffffff" filter="url(#glow)"/>
+    <path d="M300 140 L305 145 L300 150 L295 145 Z" fill="#ffffff" filter="url(#glow)"/>
+    <path d="M600 100 L605 105 L600 110 L595 105 Z" fill="#ffffff" filter="url(#glow)"/>
+  </g>
   
-  <!-- People silhouettes -->
-  <!-- Person 1 (left side) -->
-  <ellipse cx="120" cy="350" rx="25" ry="35" fill="#1f2937" opacity="0.8"/>
-  <circle cx="120" cy="300" r="15" fill="#1f2937" opacity="0.8"/>
-  <rect x="110" y="385" width="20" height="30" rx="10" fill="#1f2937" opacity="0.8"/>
-  <rect x="100" y="365" width="15" height="25" rx="7" fill="#1f2937" opacity="0.8"/>
-  <rect x="125" y="365" width="15" height="25" rx="7" fill="#1f2937" opacity="0.8"/>
+  <!-- Neon-framed screen background -->
+  <rect x="200" y="50" width="500" height="300" rx="20" fill="#000000" stroke="url(#neonBlue)" stroke-width="4" filter="url(#glow)"/>
+  <rect x="210" y="60" width="480" height="280" rx="15" fill="#1a1a1a"/>
   
-  <!-- Person 2 (right side) -->
-  <ellipse cx="680" cy="380" rx="30" ry="40" fill="#1f2937" opacity="0.8"/>
-  <circle cx="680" cy="325" r="18" fill="#1f2937" opacity="0.8"/>
-  <rect x="665" y="420" width="30" height="35" rx="15" fill="#1f2937" opacity="0.8"/>
-  <rect x="650" y="395" width="20" height="30" rx="10" fill="#1f2937" opacity="0.8"/>
-  <rect x="690" y="395" width="20" height="30" rx="10" fill="#1f2937" opacity="0.8"/>
+  <!-- Screen panels with celebratory scenes -->
+  <!-- Top row -->
+  <rect x="220" y="70" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
+  <rect x="380" y="70" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
+  <rect x="540" y="70" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
   
-  <!-- Person 3 (center back) -->
-  <ellipse cx="400" cy="420" rx="20" ry="30" fill="#1f2937" opacity="0.6"/>
-  <circle cx="400" cy="385" r="12" fill="#1f2937" opacity="0.6"/>
-  <rect x="390" y="450" width="20" height="25" rx="10" fill="#1f2937" opacity="0.6"/>
-  <rect x="380" y="435" width="12" height="20" rx="6" fill="#1f2937" opacity="0.6"/>
-  <rect x="408" y="435" width="12" height="20" rx="6" fill="#1f2937" opacity="0.6"/>
+  <!-- Bottom row -->
+  <rect x="220" y="210" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
+  <rect x="380" y="210" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
+  <rect x="540" y="210" width="150" height="130" rx="8" fill="#2a2a2a" stroke="url(#neonPink)" stroke-width="2"/>
   
-  <!-- Phone mockup (more prominent) -->
-  <rect x="50" y="150" width="140" height="220" rx="25" fill="#1f2937" stroke="#374151" stroke-width="3"/>
-  <rect x="60" y="160" width="120" height="200" rx="15" fill="#ffffff"/>
+  <!-- Screen content - couples and groups -->
+  <!-- Top left - couple -->
+  <circle cx="280" cy="120" r="15" fill="#8b5cf6"/>
+  <circle cx="320" cy="120" r="15" fill="#f472b6"/>
+  <rect x="270" y="135" width="20" height="30" rx="10" fill="#8b5cf6"/>
+  <rect x="310" y="135" width="20" height="30" rx="10" fill="#f472b6"/>
   
-  <!-- Phone screen content -->
-  <rect x="70" y="170" width="100" height="25" rx="6" fill="url(#partyGradient)"/>
-  <rect x="70" y="210" width="80" height="10" rx="5" fill="#e5e7eb"/>
-  <rect x="70" y="230" width="70" height="10" rx="5" fill="#e5e7eb"/>
+  <!-- Top center - bride and groom -->
+  <circle cx="440" cy="120" r="15" fill="#ffffff"/>
+  <circle cx="480" cy="120" r="15" fill="#ffffff"/>
+  <rect x="430" y="135" width="20" height="30" rx="10" fill="#ffffff"/>
+  <rect x="470" y="135" width="20" height="30" rx="10" fill="#ffffff"/>
   
-  <!-- Photo grid on phone -->
-  <rect x="80" y="250" width="25" height="25" rx="6" fill="#3b82f6"/>
-  <rect x="110" y="250" width="25" height="25" rx="6" fill="#ef4444"/>
-  <rect x="140" y="250" width="25" height="25" rx="6" fill="#f59e0b"/>
-  <rect x="80" y="280" width="25" height="25" rx="6" fill="#8b5cf6"/>
-  <rect x="110" y="280" width="25" height="25" rx="6" fill="#06b6d4"/>
-  <rect x="140" y="280" width="25" height="25" rx="6" fill="#84cc16"/>
-  <rect x="80" y="310" width="25" height="25" rx="6" fill="#ec4899"/>
-  <rect x="110" y="310" width="25" height="25" rx="6" fill="#10b981"/>
-  <rect x="140" y="310" width="25" height="25" rx="6" fill="#f97316"/>
+  <!-- Top right - laughing couple -->
+  <circle cx="600" cy="120" r="15" fill="#3b82f6"/>
+  <circle cx="640" cy="120" r="15" fill="#ec4899"/>
+  <rect x="590" y="135" width="20" height="30" rx="10" fill="#3b82f6"/>
+  <rect x="630" y="135" width="20" height="30" rx="10" fill="#ec4899"/>
   
-  <!-- Large projector screen -->
-  <rect x="350" y="80" width="350" height="200" rx="15" fill="#1f2937" stroke="#374151" stroke-width="4"/>
-  <rect x="365" y="95" width="320" height="170" rx="8" fill="#000000"/>
+  <!-- Bottom left - group -->
+  <circle cx="260" cy="260" r="12" fill="#10b981"/>
+  <circle cx="290" cy="260" r="12" fill="#f59e0b"/>
+  <circle cx="320" cy="260" r="12" fill="#ef4444"/>
+  <rect x="250" y="275" width="15" height="25" rx="7" fill="#10b981"/>
+  <rect x="280" y="275" width="15" height="25" rx="7" fill="#f59e0b"/>
+  <rect x="310" y="275" width="15" height="25" rx="7" fill="#ef4444"/>
   
-  <!-- Projected photos (larger and more dynamic) -->
-  <rect x="380" y="110" width="50" height="50" rx="8" fill="#3b82f6" opacity="0.9"/>
-  <rect x="440" y="110" width="50" height="50" rx="8" fill="#ef4444" opacity="0.9"/>
-  <rect x="500" y="110" width="50" height="50" rx="8" fill="#f59e0b" opacity="0.9"/>
-  <rect x="560" y="110" width="50" height="50" rx="8" fill="#8b5cf6" opacity="0.9"/>
-  <rect x="620" y="110" width="50" height="50" rx="8" fill="#06b6d4" opacity="0.9"/>
-  <rect x="380" y="170" width="50" height="50" rx="8" fill="#84cc16" opacity="0.9"/>
-  <rect x="440" y="170" width="50" height="50" rx="8" fill="#f97316" opacity="0.9"/>
-  <rect x="500" y="170" width="50" height="50" rx="8" fill="#ec4899" opacity="0.9"/>
-  <rect x="560" y="170" width="50" height="50" rx="8" fill="#10b981" opacity="0.9"/>
-  <rect x="620" y="170" width="50" height="50" rx="8" fill="#fbbf24" opacity="0.9"/>
+  <!-- Bottom center - group -->
+  <circle cx="420" cy="260" r="12" fill="#8b5cf6"/>
+  <circle cx="450" cy="260" r="12" fill="#06b6d4"/>
+  <circle cx="480" cy="260" r="12" fill="#f97316"/>
+  <rect x="410" y="275" width="15" height="25" rx="7" fill="#8b5cf6"/>
+  <rect x="440" y="275" width="15" height="25" rx="7" fill="#06b6d4"/>
+  <rect x="470" y="275" width="15" height="25" rx="7" fill="#f97316"/>
   
-  <!-- Projector (more prominent) -->
-  <rect x="500" y="300" width="80" height="50" rx="8" fill="#6b7280"/>
-  <rect x="515" y="285" width="50" height="15" rx="3" fill="#9ca3af"/>
-  <rect x="520" y="280" width="40" height="8" rx="2" fill="#d1d5db"/>
+  <!-- Bottom right - group -->
+  <circle cx="580" cy="260" r="12" fill="#ec4899"/>
+  <circle cx="610" cy="260" r="12" fill="#84cc16"/>
+  <circle cx="640" cy="260" r="12" fill="#3b82f6"/>
+  <rect x="570" y="275" width="15" height="25" rx="7" fill="#ec4899"/>
+  <rect x="600" y="275" width="15" height="25" rx="7" fill="#84cc16"/>
+  <rect x="630" y="275" width="15" height="25" rx="7" fill="#3b82f6"/>
   
-  <!-- Connection lines (more dynamic) -->
-  <path d="M190 260 Q300 200 350 180" stroke="#10b981" stroke-width="4" fill="none" stroke-dasharray="8,4" opacity="0.8"/>
-  <path d="M190 280 Q320 220 380 200" stroke="#059669" stroke-width="3" fill="none" stroke-dasharray="6,3" opacity="0.6"/>
+  <!-- Four people in foreground -->
+  <!-- Woman 1 - African American with gold/pink dress, champagne flute -->
+  <ellipse cx="150" cy="450" rx="35" ry="50" fill="#d4af37"/>
+  <circle cx="150" cy="380" r="20" fill="#8b4513"/>
+  <rect x="140" y="500" width="20" height="40" rx="10" fill="#d4af37"/>
+  <rect x="130" y="480" width="15" height="30" rx="7" fill="#d4af37"/>
+  <rect x="155" y="480" width="15" height="30" rx="7" fill="#d4af37"/>
+  <!-- Champagne flute -->
+  <rect x="170" y="370" width="3" height="15" fill="#ffffff"/>
+  <circle cx="171.5" cy="385" r="4" fill="#fbbf24"/>
   
-  <!-- AI filter icon (larger and more prominent) -->
-  <circle cx="250" cy="200" r="25" fill="#10b981" opacity="0.3"/>
-  <circle cx="250" cy="200" r="20" fill="#10b981" opacity="0.5"/>
-  <path d="M240 190 L250 200 L260 190" stroke="#ffffff" stroke-width="3" fill="none"/>
-  <path d="M240 210 L250 200 L260 210" stroke="#ffffff" stroke-width="3" fill="none"/>
-  <text x="250" y="235" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AI FILTER</text>
+  <!-- Man 2 - African American with magenta blazer, video camera -->
+  <ellipse cx="300" cy="460" rx="40" ry="55" fill="#dc2626"/>
+  <circle cx="300" cy="385" r="22" fill="#8b4513"/>
+  <rect x="285" y="515" width="30" height="45" rx="15" fill="#dc2626"/>
+  <rect x="270" y="490" width="20" height="35" rx="10" fill="#dc2626"/>
+  <rect x="310" y="490" width="20" height="35" rx="10" fill="#dc2626"/>
+  <!-- Video camera -->
+  <rect x="320" y="375" width="25" height="15" rx="3" fill="#6b7280"/>
+  <circle cx="330" cy="382" r="3" fill="#000000"/>
   
-  <!-- Fun floating elements -->
-  <circle cx="150" cy="100" r="12" fill="#10b981" opacity="0.4"/>
-  <circle cx="650" cy="150" r="16" fill="#059669" opacity="0.3"/>
-  <circle cx="100" cy="300" r="10" fill="#10b981" opacity="0.5"/>
-  <circle cx="700" cy="350" r="14" fill="#059669" opacity="0.4"/>
+  <!-- Woman 3 - Blonde with teal blazer, sunglasses -->
+  <ellipse cx="500" cy="450" rx="35" ry="50" fill="#0d9488"/>
+  <circle cx="500" cy="380" r="20" fill="#fbbf24"/>
+  <rect x="490" y="500" width="20" height="40" rx="10" fill="#0d9488"/>
+  <rect x="480" y="480" width="15" height="30" rx="7" fill="#0d9488"/>
+  <rect x="505" y="480" width="15" height="30" rx="7" fill="#0d9488"/>
+  <!-- Sunglasses -->
+  <ellipse cx="500" cy="380" rx="25" ry="8" fill="#1f2937" opacity="0.8"/>
   
-  <!-- Party streamers -->
-  <path d="M0 0 Q100 50 200 0" stroke="#ef4444" stroke-width="3" fill="none" opacity="0.6"/>
-  <path d="M0 50 Q150 100 300 50" stroke="#3b82f6" stroke-width="3" fill="none" opacity="0.6"/>
-  <path d="M500 0 Q600 50 700 0" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.6"/>
-  <path d="M500 50 Q650 100 800 50" stroke="#8b5cf6" stroke-width="3" fill="none" opacity="0.6"/>
+  <!-- Woman 4 - Dark hair with purple blazer, old phone -->
+  <ellipse cx="700" cy="450" rx="35" ry="50" fill="#7c3aed"/>
+  <circle cx="700" cy="380" r="20" fill="#1f2937"/>
+  <rect x="690" y="500" width="20" height="40" rx="10" fill="#7c3aed"/>
+  <rect x="680" y="480" width="15" height="30" rx="7" fill="#7c3aed"/>
+  <rect x="705" y="480" width="15" height="30" rx="7" fill="#7c3aed"/>
+  <!-- Old phone -->
+  <rect x="720" y="370" width="20" height="30" rx="3" fill="#10b981"/>
+  <rect x="725" y="365" width="10" height="5" rx="1" fill="#10b981"/>
+  <!-- Earring -->
+  <circle cx="720" cy="390" r="3" fill="#fbbf24"/>
   
-  <!-- Celebration emojis -->
-  <text x="200" y="120" font-size="24">🎉</text>
-  <text x="600" y="180" font-size="20">✨</text>
-  <text x="300" y="350" font-size="18">🎊</text>
-  <text x="500" y="400" font-size="22">🎈</text>
+  <!-- Connection lines from people to screen -->
+  <path d="M185 400 Q300 200 400 200" stroke="url(#neonCyan)" stroke-width="3" fill="none" stroke-dasharray="5,5" filter="url(#glow)" opacity="0.7"/>
+  <path d="M340 400 Q400 250 500 250" stroke="url(#neonPink)" stroke-width="3" fill="none" stroke-dasharray="5,5" filter="url(#glow)" opacity="0.7"/>
+  <path d="M535 400 Q500 300 600 300" stroke="url(#neonBlue)" stroke-width="3" fill="none" stroke-dasharray="5,5" filter="url(#glow)" opacity="0.7"/>
+  <path d="M665 400 Q600 350 700 350" stroke="url(#neonCyan)" stroke-width="3" fill="none" stroke-dasharray="5,5" filter="url(#glow)" opacity="0.7"/>
+  
+  <!-- AI Filter indicator -->
+  <circle cx="450" cy="400" r="30" fill="url(#neonCyan)" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="450" cy="400" r="25" fill="url(#neonCyan)" opacity="0.5" filter="url(#glow)"/>
+  <path d="M440 390 L450 400 L460 390" stroke="#ffffff" stroke-width="3" fill="none"/>
+  <path d="M440 410 L450 400 L460 410" stroke="#ffffff" stroke-width="3" fill="none"/>
+  <text x="450" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" filter="url(#glow)">AI FILTER</text>
+  
+  <!-- Partix logo on screen -->
+  <text x="450" y="40" text-anchor="middle" fill="url(#neonPink)" font-family="Arial, sans-serif" font-size="24" font-weight="bold" filter="url(#glow)">PARTIX</text>
 </svg>

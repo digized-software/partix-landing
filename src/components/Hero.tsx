@@ -117,12 +117,12 @@ export default function Hero() {
 
           {/* Hero Illustration */}
           <div className="mt-16 flex justify-center">
-            <div className="max-w-4xl w-full">
+            <div className="max-w-5xl w-full">
               <Image
-                src="/hero-illustration.svg"
-                alt="Partix in action - people at a party taking photos that appear on a projector screen with AI filtering"
-                width={800}
-                height={500}
+                src="/hero-img.png"
+                alt="Partix in action - four people at a retro party celebrating with photos appearing on a neon-framed screen with AI filtering"
+                width={900}
+                height={600}
                 className="w-full h-auto"
                 priority
               />
