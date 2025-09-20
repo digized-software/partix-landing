@@ -1,11 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   const trackCTA = (action: string) => {
-    if (typeof window !== "undefined" && (window as any).partixTelemetry) {
-      (window as any).partixTelemetry.track("cta_click", {
+    if (
+      typeof window !== "undefined" &&
+      (
+        window as unknown as {
+          partixTelemetry?: {
+            track: (event: string, properties: Record<string, unknown>) => void;
+          };
+        }
+      ).partixTelemetry
+    ) {
+      (
+        window as unknown as {
+          partixTelemetry: {
+            track: (event: string, properties: Record<string, unknown>) => void;
+          };
+        }
+      ).partixTelemetry.track("cta_click", {
         action,
         location: "hero",
         timestamp: new Date().toISOString(),
@@ -96,6 +112,20 @@ export default function Hero() {
                 />
               </svg>
               <span>Real-time Projection</span>
+            </div>
+          </div>
+
+          {/* Hero Illustration */}
+          <div className="mt-16 flex justify-center">
+            <div className="max-w-4xl w-full">
+              <Image
+                src="/hero-illustration.svg"
+                alt="Partix in action - people at a party taking photos that appear on a projector screen with AI filtering"
+                width={800}
+                height={500}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>

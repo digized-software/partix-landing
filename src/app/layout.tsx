@@ -34,6 +34,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3V61LQ913F"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-3V61LQ913F');
+            `,
+          }}
+        />
+        
         {/* Telemetry and Analytics */}
         <script
           dangerouslySetInnerHTML={{
@@ -42,7 +55,10 @@ export default function RootLayout({
               window.partixTelemetry = {
                 track: function(event, properties = {}) {
                   console.log('Partix Telemetry:', event, properties);
-                  // Add your analytics service here (e.g., Google Analytics, Mixpanel, etc.)
+                  // Send to Google Analytics
+                  if (typeof gtag !== 'undefined') {
+                    gtag('event', event, properties);
+                  }
                 },
                 identify: function(userId, traits = {}) {
                   console.log('Partix Identify:', userId, traits);

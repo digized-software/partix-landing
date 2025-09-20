@@ -100,10 +100,10 @@ export default function Pricing() {
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`bg-background p-6 rounded-lg border-2 transition-all duration-200 hover:shadow-lg relative ${
+              className={`bg-background p-6 rounded-lg border-2 transition-all duration-300 hover:shadow-lg relative ${
                 tier.popular
                   ? "border-green-500 shadow-lg scale-105"
-                  : "border-border hover:border-green-300"
+                  : "border-border hover:border-green-300 hover:-translate-y-1"
               }`}
             >
               {tier.popular && (

@@ -27,8 +27,9 @@ export default function TermsOfService() {
               1. Acceptance of Terms
             </h2>
             <p className="text-muted-foreground mb-4">
-              By accessing and using Partix ("the Service"), you accept and
-              agree to be bound by the terms and provision of this agreement.
+              By accessing and using Partix (&quot;the Service&quot;), you
+              accept and agree to be bound by the terms and provision of this
+              agreement.
             </p>
           </section>
 
@@ -94,12 +95,13 @@ export default function TermsOfService() {
               5. Disclaimer
             </h2>
             <p className="text-muted-foreground mb-4">
-              The materials on Partix are provided on an 'as is' basis. Partix
-              makes no warranties, expressed or implied, and hereby disclaims
-              and negates all other warranties including without limitation,
-              implied warranties or conditions of merchantability, fitness for a
-              particular purpose, or non-infringement of intellectual property
-              or other violation of rights.
+              The materials on Partix are provided on an &apos;as is&apos;
+              basis. Partix makes no warranties, expressed or implied, and
+              hereby disclaims and negates all other warranties including
+              without limitation, implied warranties or conditions of
+              merchantability, fitness for a particular purpose, or
+              non-infringement of intellectual property or other violation of
+              rights.
             </p>
           </section>
 
